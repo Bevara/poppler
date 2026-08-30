@@ -1,0 +1,17 @@
+{
+    "name": "libpoppler",
+    "description": "PDF image decoder",
+    "filters":["pdfdec"],
+    "help": "This filter renders the first page of a PDF file to a raw RGB image using poppler.",
+    "support": [
+        "image"
+    ],
+    "sources":"https://bevara.ddns.net/sources/libpoppler.accessor",
+    "filter_source":{
+        "pdfdec" : "dec_pdf.cpp"
+    },
+    "extension":{
+      "pdf" : "img"
+    },
+    "licence_required":false
+}
