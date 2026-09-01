@@ -12,6 +12,7 @@ SET(LIBPOPPLER_SRC
 SET(LIBPOPPLER_LIB
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/libpoppler-cpp.a
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/libpoppler.a
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/libfreetype.a
 )
 
 SET(LIBPOPPLER_INC

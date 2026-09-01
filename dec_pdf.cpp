@@ -207,7 +207,7 @@ GF_FilterRegister PDFDecoderRegister = {
 
 extern "C" {
 
-const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_pdfdec_register(GF_FilterSession *session)
+const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE pdfdec_register(GF_FilterSession *session)
 {
 	return &PDFDecoderRegister;
 }
@@ -215,7 +215,7 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_pdfdec_register(GF_Filter
 #include "filter_register.h"
 __attribute__((constructor))
 void register_pdfdec(void) {
-    gf_filter_auto_register("pdfdec", dynCall_pdfdec_register);
+    gf_filter_auto_register("pdfdec", pdfdec_register);
 }
 
 }
