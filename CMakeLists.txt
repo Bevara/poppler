@@ -13,6 +13,11 @@ SET(LIBPOPPLER_LIB
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/libpoppler-cpp.a
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/libpoppler.a
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/libfreetype.a
+        # poppler is built with DCT support, so it pulls in jpeg_std_error &
+        # co for JPEG images embedded in PDFs. Neither solver provides them
+        # (gpac is configured --use-jpeg=no), so the filter has to carry its
+        # own copy, exactly like libfreetype.a just above.
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/libjpeg.a
 )
 
 SET(LIBPOPPLER_INC
