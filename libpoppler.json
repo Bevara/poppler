@@ -14,5 +14,5 @@
       "pdf" : "img"
     },
     "licence_required":false,
-    "using": ["solver_1"]
+    "using": ["mm_solver_1.0.1"]
 }
